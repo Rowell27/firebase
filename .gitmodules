@@ -1,0 +1,6 @@
+[submodule "src/fireframe"]
+	path = src/fireframe
+	url = http://github.com/thruthesky/fireframe
+[submodule "fireframe"]
+	path = fireframe
+	url = https://github.com/thruthesky/fireframe.git
