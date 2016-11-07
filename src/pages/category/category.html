@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>category</ion-title>
+    <ion-title>Category Lists</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,4 +15,20 @@
 
 <ion-content padding>
   
+  <p>Category item count : {{ count }}</p>
+  <button ion-button (click)="onClickCreateCategory()">Create New Category</button>
+
+  <ion-grid *ngFor=" let id of categories ">
+    <ion-row>
+      <ion-col width-20>{{ data[id].id }}</ion-col>
+      <ion-col width-20>{{ data[id].name }}</ion-col>
+      <ion-col width-20>{{ data[id].title }}</ion-col>
+      <ion-col width-20>{{ data[id].description }}</ion-col>
+      <ion-col width-20>
+        <button ion-button (click)="onClickEditCategory(id)">Edit</button>
+        <button ion-button (click)="onClickDeleteCategory(id)">Delete</button>   
+      </ion-col>
+    </ion-row>  
+  </ion-grid>
+
 </ion-content>

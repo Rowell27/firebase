@@ -5,6 +5,7 @@ import { HomePage } from '../pages/home/home';
 import { Login } from  '../pages/login/login';
 import { Register } from '../pages/register/register';
 import { CategoryPage } from '../pages/category/category';
+import { CategoryEditPage } from '../pages/category-edit/category-edit';
 
 
 @NgModule({
@@ -13,7 +14,7 @@ import { CategoryPage } from '../pages/category/category';
     HomePage,
     Login,
     Register,
-    CategoryPage
+    CategoryPage, CategoryEditPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -24,7 +25,7 @@ import { CategoryPage } from '../pages/category/category';
     HomePage,
     Login,
     Register,
-    CategoryPage
+    CategoryPage, CategoryEditPage
   ],
   providers: [  ]
 })

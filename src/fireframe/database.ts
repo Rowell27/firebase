@@ -20,7 +20,7 @@ export class Database {
    */
   connect() {
     if ( Database.__connect ) {
-      console.log("Database connection already maid...");
+      console.log("Database connection already made...");
       return;
     }
     Database.__connect = true;
@@ -30,11 +30,11 @@ export class Database {
       // databaseURL: "https://test-ec3e3.firebaseio.com",
       // storageBucket: "test-ec3e3.appspot.com",
       // messagingSenderId: "55749236444"
-      apiKey: "AIzaSyA_5TfmjVrjEN-oW0texvMX2MYw_jBXQE4",
-      authDomain: "fireframe-ea3ba.firebaseapp.com",
-      databaseURL: "https://fireframe-ea3ba.firebaseio.com",
-      storageBucket: "fireframe-ea3ba.appspot.com",
-      messagingSenderId: "218000694542"
+        apiKey: "AIzaSyA_5TfmjVrjEN-oW0texvMX2MYw_jBXQE4",
+        authDomain: "fireframe-ea3ba.firebaseapp.com",
+        databaseURL: "https://fireframe-ea3ba.firebaseio.com",
+        storageBucket: "fireframe-ea3ba.appspot.com",
+        messagingSenderId: "218000694542"
     };
     firebase.initializeApp(config);
     this.db = firebase.database();

@@ -108,6 +108,12 @@ export interface CategoryData {
     title: string;
     description: string;
 }
+export let categoryData = {
+    id: '',
+    name: '',
+    title: '',
+    description: ''
+  };
 export class Category {
     db: Database;
     ref: firebase.database.Reference;
@@ -255,10 +261,21 @@ export class Category {
     }
 
     /**
-     * Removes the complete location
+     * Removes the whole category storage
      */
     destroy( callback? ) {
         this.ref.remove( callback );
     }
 
+    /**
+     * Counts the number of children using numChildren.
+     * It returns value of count (in number) if callback succeed.
+     */
+    counter(  successCallback, failureCallback? ) {
+        this.ref.once("value", snapshot => {
+           let count = snapshot.numChildren();
+        //    console.log("Category count: " + count);
+           successCallback(count);
+        }, failureCallback );
+    }   
 }
